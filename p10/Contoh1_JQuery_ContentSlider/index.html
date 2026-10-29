@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Content Slider – Portfolio</title>
+    <meta name="description" content="A beautiful jQuery content slider showcasing portfolio, trips, and skills."/>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 40px 20px 60px;
+        }
+
+        /* ── Header ── */
+        .site-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        .site-header .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.6);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 5px 16px;
+            border-radius: 50px;
+            margin-bottom: 14px;
+        }
+        .site-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #fff;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        .site-header h1 span {
+            background: linear-gradient(90deg, #a78bfa, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .site-header p {
+            margin-top: 10px;
+            color: rgba(255,255,255,0.45);
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        /* ── Slider wrapper ── */
+        #content {
+            width: 860px;
+            max-width: 100%;
+        }
+
+        /* ── Progress bar ── */
+        #progress-bar-wrap {
+            width: 800px;
+            max-width: 100%;
+            margin: 0 auto 10px;
+            height: 3px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #a78bfa, #60a5fa);
+            border-radius: 2px;
+            transition: width linear;
+        }
+
+        /* ── Footer ── */
+        .site-footer {
+            margin-top: 28px;
+            color: rgba(255,255,255,0.25);
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        .site-footer a {
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .site-footer a:hover { color: #a78bfa; }
+
+        /* ── Slide counter ── */
+        #slide-counter {
+            width: 800px;
+            max-width: 100%;
+            margin: 10px auto 0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 6px;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transition: background 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .dot.active {
+            background: #a78bfa;
+            transform: scale(1.25);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="badge">jQuery Content Slider</div>
+        <h1>My <span>Portfolio</span></h1>
+    </header>
+
+    <!-- Slider -->
+    <div id="content">
+
+        <!-- Progress bar -->
+        <div id="progress-bar-wrap">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div class="rotator">
+            <ul id="rotmenu">
+                <li>
+                    <a href="rot1" id="tab-1">Portofolio</a>
+                    <div style="display:none;">
+                        <div class="info_image">1.jpg</div>
+                        <div class="info_heading">This is my Hobbies</div>
+                        <div class="info_description">
+                            Listening music is always fun. Apakah Anda menyukai musik juga?
+                            Menurut saya mendengarkan lagu jazz dan classics membuat hati lebih
+                            tentram. Bagaimana dengan Anda?
+                            <a href="#" class="more">Read more →</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="rot2" id="tab-2">My Holiday</a>
+                    <div style="display:none;">
+                        <div class="info_image">2.jpg</div>
+                        <div class="info_heading">My Trip Going Fun! Come on</div>
+                        <div class="info_description">
+                            Anda suka berpetualang? Kali ini saya mengunjungi salah satu tempat
+                            menarik yang ada di Lembang Bandung. Sabana yang hijau membuat fikiran
+                            lebih tenang dan damai.
+                            <a href="#" class="more">Read more →</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="rot3" id="tab-3">Gun's Skill</a>
+                    <div style="display:none;">
+                        <div class="info_image">3.jpg</div>
+                        <div class="info_heading">One Bullet, One Head</div>
+                        <div class="info_description">
+                            Precision is everything. Latihan keras setiap hari membentuk
+                            kemampuan yang tidak tertandingi. Fokus, kesabaran, dan ketenangan
+                            adalah kunci keberhasilan.
+                            <a href="#" class="more">Read more →</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="rot4" id="tab-4">Pilot's Skill</a>
+                    <div style="display:none;">
+                        <div class="info_image">4.jpg</div>
+                        <div class="info_heading">Aircraft Engineering</div>
+                        <div class="info_description">
+                            Terbang tinggi melampaui awan. Kemampuan navigasi dan kontrol yang
+                            presisi menjadikan setiap penerbangan sebuah karya seni yang
+                            menakjubkan di langit biru.
+                            <a href="#" class="more">Read more →</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="rot5" id="tab-5">Get on Trip</a>
+                    <div style="display:none;">
+                        <div class="info_image">5.jpg</div>
+                        <div class="info_heading">Beautiful View Awaits</div>
+                        <div class="info_description">
+                            Setiap perjalanan adalah petualangan baru yang penuh kejutan. Alam
+                            yang indah, udara segar, dan panorama memukau selalu menjadi obat
+                            terbaik untuk jiwa yang lelah.
+                            <a href="#" class="more">Read more →</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div id="rot1">
+                <img src="" width="800" height="400" class="bg" alt="Slide image"/>
+                <div class="heading">
+                    <h2></h2>
+                </div>
+                <div class="description">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dots indicator -->
+        <div id="slide-counter">
+            <span class="dot active" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>Contoh jQuery Content Slider &nbsp;·&nbsp; Praktikum P10 ♥ &nbsp;&nbsp;</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        var current      = 1;
+        var totalSlides  = $('#rotmenu').children('li').length;
+        var slideDuration = 4000;   // ms per slide
+        var slidetime;
+
+        /* ── Progress bar ── */
+        function startProgress() {
+            $('#progress-bar').stop(true).css('width','0%')
+                .animate({ width: '100%' }, { duration: slideDuration, easing: 'linear' });
+        }
+
+        /* ── Dot indicators ── */
+        function updateDots(idx) {
+            $('.dot').removeClass('active');
+            $('.dot[data-index="' + idx + '"]').addClass('active');
+        }
+
+        /* ── Iterate (auto) ── */
+        function iterate() {
+            var i = (current % totalSlides) + 1;
+            display($('#rotmenu li:nth-child(' + i + ')'));
+        }
+
+        /* ── Start auto-slide ── */
+        function startAuto() {
+            slidetime = setInterval(iterate, slideDuration);
+        }
+
+        /* ── Display function ── */
+        function display(elem) {
+            var $this  = elem;
+            var repeat = (current === parseInt($this.index() + 1));
+
+            if (!repeat) {
+                $this.parent().find('li:nth-child(' + current + ') a')
+                    .stop(true, true)
+                    .animate({ 'marginRight': '-20px' }, 300, function () {
+                        $(this).animate({ 'opacity': '0.6' }, 500);
+                    });
+            }
+
+            current = parseInt($this.index() + 1);
+            updateDots(current);
+            startProgress();
+
+            var tabLink = $('a', $this);
+            tabLink.stop(true, true).animate({ 'marginRight': '0px', 'opacity': '1.0' }, 300);
+
+            var info_elem = tabLink.next();
+
+            /* heading slides */
+            $('#rot1 .heading').animate({ 'left': '-520px' }, 450, 'easeOutCirc', function () {
+                $('h2', $(this)).html(info_elem.find('.info_heading').html());
+                $(this).animate({ 'left': '0px' }, 400, 'easeInOutQuad');
+            });
+
+            /* description slides */
+            $('#rot1 .description').animate({ 'bottom': '-270px' }, 450, 'easeOutCirc', function () {
+                $('p', $(this)).html(info_elem.find('.info_description').html());
+                $(this).animate({ 'bottom': '0px' }, 400, 'easeInOutQuad');
+            });
+
+            /* image crossfade */
+            $('#rot1').prepend(
+                $('<img/>', { style: 'opacity:0', 'class': 'bg' })
+                .load(function () {
+                    $(this).animate({ 'opacity': '1' }, 700);
+                    $('#rot1 img.bg:first').next('.bg').animate({ 'opacity': '0' }, 800, function () {
+                        $(this).remove();
+                    });
+                })
+                .attr('src', 'images/' + info_elem.find('.info_image').html())
+                .attr('width', '800')
+                .attr('height', '400')
+            );
+        }
+
+        /* ── Init ── */
+        display($('#rotmenu li:first'));
+        startAuto();
+
+        /* ── Click on tab ── */
+        $('#rotmenu li').on('click', function (e) {
+            clearInterval(slidetime);
+            display($(this));
+            startAuto();            // restart auto after manual click
+            e.preventDefault();
+        });
+
+        /* ── Click on dot ── */
+        $('.dot').on('click', function () {
+            var idx = parseInt($(this).data('index'));
+            clearInterval(slidetime);
+            display($('#rotmenu li:nth-child(' + idx + ')'));
+            startAuto();
+        });
+    });
+    </script>
+</body>
+</html>

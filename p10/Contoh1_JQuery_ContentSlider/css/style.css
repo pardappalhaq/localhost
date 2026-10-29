@@ -1,0 +1,180 @@
+/* ═══════════════════════════════════════
+   Content Slider – Modern CSS
+   ═══════════════════════════════════════ */
+
+/* ── Rotator wrapper ── */
+.rotator {
+    background-color: #111;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Inter', 'Myriad Pro', Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,0.07),
+        0 30px 80px rgba(0,0,0,0.7),
+        0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ── Background image ── */
+img.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.72) saturate(1.1);
+    transition: filter 0.5s ease;
+}
+
+/* ── Tab menu (right side) ── */
+.rotator ul {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.rotator ul li {
+    display: block;
+}
+
+.rotator ul li a {
+    display: flex;
+    align-items: center;
+    width: 190px;
+    height: 54px;
+    padding: 0 18px 0 16px;
+    float: right;
+    text-decoration: none;
+    background: rgba(10, 10, 20, 0.72);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: 0 -22px 0 0;
+    opacity: 0.65;
+    color: #e0e0e0;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-right: none;
+    outline: none;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    border-radius: 12px 0 0 12px;
+    transition: background 0.25s, opacity 0.25s, color 0.25s, border-color 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left accent line on active tab */
+.rotator ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 60%;
+    width: 3px;
+    background: linear-gradient(180deg, #a78bfa, #60a5fa);
+    border-radius: 0 2px 2px 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.rotator ul li a:hover {
+    background: rgba(30, 30, 50, 0.85);
+    opacity: 0.9;
+    color: #fff;
+    border-color: rgba(255,255,255,0.15);
+}
+
+/* Active tab (full opacity, extra left line) – set via JS */
+.rotator ul li a.active-tab {
+    opacity: 1 !important;
+    margin-right: 0 !important;
+    background: rgba(20, 20, 40, 0.92) !important;
+    color: #fff;
+    border-color: rgba(167,139,250,0.3);
+}
+.rotator ul li a.active-tab::before {
+    opacity: 1;
+}
+
+/* ── Heading overlay ── */
+.rotator .heading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 560px;
+    padding: 28px 30px 16px;
+    background: linear-gradient(180deg,
+        rgba(0,0,0,0.65) 0%,
+        rgba(0,0,0,0.0) 100%);
+}
+
+.rotator .heading h2 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.25;
+    color: #fff;
+    text-transform: none;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+
+/* ── Description overlay ── */
+.rotator .description {
+    width: 580px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 28px 22px;
+    background: linear-gradient(0deg,
+        rgba(0,0,0,0.85) 0%,
+        rgba(0,0,0,0.55) 60%,
+        rgba(0,0,0,0.0) 100%);
+    border-top: none;
+}
+
+.rotator .description p {
+    text-transform: none;
+    letter-spacing: normal;
+    line-height: 1.65;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.82);
+    font-weight: 300;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    max-width: 480px;
+}
+
+/* ── Read more link ── */
+a.more {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 10px;
+    color: #a78bfa;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: color 0.2s, gap 0.2s;
+}
+a.more:hover {
+    color: #c4b5fd;
+    gap: 8px;
+}

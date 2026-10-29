@@ -1,0 +1,264 @@
+Waktu     : 2026-10-29 06:04:16
+Aksi      : Enkripsi
+Kunci     : 3
+Teks Asli : nama saya daffa
+Hasil     : qdpd vdbd gdiid
+----------------------------------------
+Waktu     : 2026-10-29 07:20:14
+Aksi      : Dekripsi
+Kunci     : 3
+Teks Asli : vdbd nxflqj vxnd nrsl
+Hasil     : saya kucing suka kopi
+----------------------------------------
+Waktu     : 2026-10-29 07:23:34
+Aksi      : Dekripsi
+Kunci     : 3
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : eptfo qjtboh nfohvkj lpef
+----------------------------------------
+Waktu     : 2026-10-29 07:23:42
+Aksi      : Dekripsi
+Kunci     : 1
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : grvhq slvdqj phqjxml nrgh
+----------------------------------------
+Waktu     : 2026-10-29 07:23:46
+Aksi      : Dekripsi
+Kunci     : 5
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : cnrdm ohrzmf ldmftih jncd
+----------------------------------------
+Waktu     : 2026-10-29 07:23:56
+Aksi      : Dekripsi
+Kunci     : 7
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : alpbk mfpxkd jbkdrgf hlab
+----------------------------------------
+Waktu     : 2026-10-29 07:24:00
+Aksi      : Dekripsi
+Kunci     : 6
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : bmqcl ngqyle kcleshg imbc
+----------------------------------------
+Waktu     : 2026-10-29 07:24:06
+Aksi      : Enkripsi
+Kunci     : 6
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : nycox zsckxq woxqets uyno
+----------------------------------------
+Waktu     : 2026-10-29 07:24:09
+Aksi      : Dekripsi
+Kunci     : 6
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : bmqcl ngqyle kcleshg imbc
+----------------------------------------
+Waktu     : 2026-10-29 07:24:13
+Aksi      : Dekripsi
+Kunci     : 8
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : zkoaj leowjc iajcqfe gkza
+----------------------------------------
+Waktu     : 2026-10-29 07:24:17
+Aksi      : Dekripsi
+Kunci     : 8
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : zkoaj leowjc iajcqfe gkza
+----------------------------------------
+Waktu     : 2026-10-29 07:24:21
+Aksi      : Dekripsi
+Kunci     : 9
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : yjnzi kdnvib hzibped fjyz
+----------------------------------------
+Waktu     : 2026-10-29 07:24:28
+Aksi      : Dekripsi
+Kunci     : 20
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : nycox zsckxq woxqets uyno
+----------------------------------------
+Waktu     : 2026-10-29 07:24:56
+Aksi      : Dekripsi
+Kunci     : 2
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : fqugp rkucpi ogpiwlk mqfg
+----------------------------------------
+Waktu     : 2026-10-29 07:25:01
+Aksi      : Dekripsi
+Kunci     : 3
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : eptfo qjtboh nfohvkj lpef
+----------------------------------------
+Waktu     : 2026-10-29 07:25:06
+Aksi      : Dekripsi
+Kunci     : 25
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : itxjs unxfsl rjslzon ptij
+----------------------------------------
+Waktu     : 2026-10-29 07:25:10
+Aksi      : Dekripsi
+Kunci     : 23
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : kvzlu wpzhun tlunbqp rvkl
+----------------------------------------
+Waktu     : 2026-10-29 07:25:12
+Aksi      : Dekripsi
+Kunci     : 23
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : kvzlu wpzhun tlunbqp rvkl
+----------------------------------------
+Waktu     : 2026-10-29 07:29:21
+Aksi      : Dekripsi
+Kunci     : 23
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : kvzlu wpzhun tlunbqp rvkl
+----------------------------------------
+Waktu     : 2026-10-29 07:29:26
+Aksi      : Dekripsi
+Kunci     : 23
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : kvzlu wpzhun tlunbqp rvkl
+----------------------------------------
+Waktu     : 2026-10-29 07:29:33
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 4 (terdeteksi otomatis)
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : dosen pisang menguji kode
+----------------------------------------
+Waktu     : 2026-10-29 07:29:54
+Aksi      : Dekripsi
+Kunci     : 5
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : cnrdm ohrzmf ldmftih jncd
+----------------------------------------
+Waktu     : 2026-10-29 07:29:57
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 4 (terdeteksi otomatis)
+Teks Asli : hswir tmwerk qirkynm oshi
+Hasil     : dosen pisang menguji kode
+----------------------------------------
+Waktu     : 2026-10-29 07:30:18
+Aksi      : Enkripsi
+Kunci     : 3
+Teks Asli : ipb ikan sangat hebat
+Hasil     : lse lndq vdqjdw khedw
+----------------------------------------
+Waktu     : 2026-10-29 07:34:18
+Aksi      : Enkripsi (Auto-Detect)
+Kunci     : 25 (terdeteksi otomatis)
+Teks Asli : ipb ikan sangat hebat
+Hasil     : hoa hjzm rzmfzs gdazs
+----------------------------------------
+Waktu     : 2026-10-29 07:34:22
+Aksi      : Dekripsi
+Kunci     : 25
+Teks Asli : ipb ikan sangat hebat
+Hasil     : jqc jlbo tbohbu ifcbu
+----------------------------------------
+Waktu     : 2026-10-29 07:34:25
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 15 (terdeteksi otomatis)
+Teks Asli : ipb ikan sangat hebat
+Hasil     : tam tvly dlyrle spmle
+----------------------------------------
+Waktu     : 2026-10-29 07:34:32
+Aksi      : Enkripsi (Auto-Detect)
+Kunci     : 25 (terdeteksi otomatis)
+Teks Asli : ipb ikan sangat hebat
+Hasil     : hoa hjzm rzmfzs gdazs
+----------------------------------------
+Waktu     : 2026-10-29 07:34:42
+Aksi      : Dekripsi
+Kunci     : 25
+Teks Asli : ipb ikan sangat hebat
+Hasil     : jqc jlbo tbohbu ifcbu
+----------------------------------------
+Waktu     : 2026-10-29 07:42:08
+Aksi      : Enkripsi (Auto-Detect)
+Kunci     : 25 (terdeteksi otomatis)
+Teks Asli : ipb ikan sangat hebat
+Hasil     : hoa hjzm rzmfzs gdazs
+----------------------------------------
+Waktu     : 2026-10-29 07:42:20
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 25 (terdeteksi otomatis)
+Teks Asli : hoa hjzm rzmfzs gdazs
+Hasil     : ipb ikan sangat hebat
+----------------------------------------
+Waktu     : 2026-10-29 07:44:15
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 23 (terdeteksi otomatis)
+Teks Asli : faris daffa al haq
+Hasil     : idulv gdiid do kdt
+----------------------------------------
+Waktu     : 2026-10-29 07:44:29
+Aksi      : Enkripsi (Auto-Detect)
+Kunci     : 22 (terdeteksi otomatis)
+Teks Asli : idulv gdiid do kdt
+Hasil     : ezqhr czeez zk gzp
+----------------------------------------
+Waktu     : 2026-10-29 07:44:36
+Aksi      : Enkripsi (Auto-Detect)
+Kunci     : 22 (terdeteksi otomatis)
+Teks Asli : idulv gdiid do kdt
+Hasil     : ezqhr czeez zk gzp
+----------------------------------------
+Waktu     : 2026-10-29 07:44:45
+Aksi      : Enkripsi (Auto-Detect)
+Kunci     : 22 (terdeteksi otomatis)
+Teks Asli : idulv gdiid do kdt
+Hasil     : ezqhr czeez zk gzp
+----------------------------------------
+Waktu     : 2026-10-29 07:45:11
+Aksi      : Enkripsi (Auto-Detect)
+Kunci     : 25 (terdeteksi otomatis)
+Teks Asli : hobi saya adalah olahraga basket
+Hasil     : gnah rzxz zczkzg nkzgqzfz azrjds
+----------------------------------------
+Waktu     : 2026-10-29 07:45:18
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 9 (terdeteksi otomatis)
+Teks Asli : gnah rzxz zczkzg nkzgqzfz azrjds
+Hasil     : xery iqoq qtqbqx ebqxhqwq rqiauj
+----------------------------------------
+Waktu     : 2026-10-29 07:51:09
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 25 (terdeteksi otomatis)
+Teks Asli : gnah rzxz zczkzg nkzgqzfz azrjds
+Hasil     : hobi saya adalah olahraga basket
+----------------------------------------
+Waktu     : 2026-10-29 07:51:19
+Aksi      : Enkripsi (Auto-Detect)
+Kunci     : 25 (terdeteksi otomatis)
+Teks Asli : saya suka makan roti
+Hasil     : rzxz rtjz lzjzm qnsh
+----------------------------------------
+Waktu     : 2026-10-29 07:51:35
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 25 (terdeteksi otomatis)
+Teks Asli : rzxz rtjz lzjzm qnsh
+Hasil     : saya suka makan roti
+----------------------------------------
+Waktu     : 2026-10-29 07:52:38
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 3 (terdeteksi otomatis)
+Teks Asli : khoor fbw zruog djdlq
+Hasil     : hello cyt world again
+----------------------------------------
+Waktu     : 2026-10-29 07:55:09
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 3 (terdeteksi otomatis)
+Teks Asli : vdbd nxflqe vxnd nrsl
+Hasil     : saya kucinb suka kopi
+----------------------------------------
+Waktu     : 2026-10-29 07:55:44
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 3 (terdeteksi otomatis)
+Teks Asli : vdbd nxflqj vxnd nrsl
+Hasil     : saya kucing suka kopi
+----------------------------------------
+Waktu     : 2026-10-29 08:00:33
+Aksi      : Dekripsi (Auto-Detect)
+Kunci     : 3 (terdeteksi otomatis)
+Teks Asli : vdbd nxflqj vxnd nrsl
+Hasil     : saya kucing suka kopi
+----------------------------------------

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pendaftaran Antrean BPJS Kesehatan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="phone-shell">
+    <header class="app-header">
+      <div class="header-badge" aria-hidden="true">🏥</div>
+      <div class="header-row">
+        <button class="back-button" type="button" aria-label="Kembali">
+          <span class="back-icon">‹</span>
+        </button>
+        <h1 class="header-title" id="headerTitle">Fasilitas Kesehatan Tingkat Pertama</h1>
+      </div>
+      <p class="header-subtitle" id="headerSubtitle">Daftarkan antrean kunjungan FKTP dengan cepat dan nyaman.</p>
+      <nav class="page-tabs" aria-label="Navigasi halaman">
+        <button class="tab-button active" type="button" data-page-target="queuePage">Antrean FKTP</button>
+        <button class="tab-button" type="button" data-page-target="bpjsPage">Daftar BPJS</button>
+      </nav>
+    </header>
+
+    <section class="content" aria-label="Form pendaftaran">
+
+      <!-- QUEUE FORM -->
+      <form class="form-card page-section active" id="registrationForm" data-page="queuePage" novalidate>
+
+        <div class="field" data-field="participant">
+          <label for="participant">Peserta</label>
+          <div class="input-wrap">
+            <select id="participant" name="participant" required>
+              <option value="FARIS DAFFA AL HAQ" selected>FARIS DAFFA AL HAQ</option>
+              <option value="SITI AISYAH">SITI AISYAH</option>
+              <option value="ANDI PRATAMA">ANDI PRATAMA</option>
+            </select>
+          </div>
+          <p class="error-message">Peserta wajib dipilih.</p>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <div class="field">
+          <span class="label">Faskes Tingkat Pertama</span>
+          <article class="faskes-card">
+            <div class="faskes-summary">
+              <div class="clinic-icon" aria-hidden="true">🏥</div>
+              <div>
+                <h2 class="faskes-name" id="facilityName">PUSKESMAS KOTA</h2>
+                <p class="faskes-hint">Ketuk ↓ untuk melihat detail</p>
+              </div>
+              <button class="collapse-button" type="button" id="toggleFacility" aria-expanded="true" aria-controls="facilityDetail">⌄</button>
+            </div>
+            <div class="faskes-detail open" id="facilityDetail">
+              <div class="detail-row">
+                <span aria-hidden="true">📍</span>
+                <span><strong>Alamat</strong><span id="facilityAddress">Jl. Kesehatan No. 123, Jakarta</span></span>
+              </div>
+              <div class="detail-row">
+                <span aria-hidden="true">☎</span>
+                <span><strong>Telepon</strong><span id="facilityPhone">021-12345678</span></span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <div class="field" data-field="clinic">
+          <label for="clinic">Poli Tujuan</label>
+          <div class="input-wrap">
+            <select id="clinic" name="clinic" required>
+              <option value="">Pilih poli tujuan</option>
+            </select>
+          </div>
+          <p class="error-message">Poli wajib dipilih.</p>
+        </div>
+
+        <div class="field" data-field="date">
+          <label for="date">Tanggal Kunjungan</label>
+          <div class="input-wrap date-wrap">
+            <input id="date" name="date" type="date" required />
+          </div>
+          <p class="error-message">Tanggal daftar wajib diisi.</p>
+        </div>
+
+        <div class="field" data-field="doctor">
+          <label for="doctor">Jadwal & Tenaga Medis</label>
+          <div class="input-wrap">
+            <select id="doctor" name="doctor" required disabled>
+              <option value="">Pilih poli terlebih dahulu</option>
+            </select>
+          </div>
+          <p class="error-message">Tenaga medis wajib dipilih.</p>
+        </div>
+
+        <div class="field" data-field="complaint">
+          <label for="complaint">Keluhan</label>
+          <textarea id="complaint" name="complaint" placeholder="Ceritakan keluhan Anda..." required></textarea>
+          <p class="error-message">Keluhan wajib diisi.</p>
+        </div>
+
+        <button class="primary-button" type="submit">Simpan Pendaftaran</button>
+      </form>
+
+      <!-- BPJS FORM -->
+      <form class="form-card page-section" id="bpjsRegistrationForm" data-page="bpjsPage" novalidate>
+        <div class="section-lead">
+          ℹ️ Lengkapi data peserta baru untuk simulasi pendaftaran BPJS Kesehatan.
+        </div>
+
+        <div class="field" data-bpjs-field="nik">
+          <label for="nik">NIK</label>
+          <input id="nik" name="nik" type="text" inputmode="numeric" maxlength="16" placeholder="16 digit nomor KTP" required />
+          <p class="error-message">NIK wajib diisi 16 digit angka.</p>
+        </div>
+
+        <div class="field" data-bpjs-field="fullName">
+          <label for="fullName">Nama Lengkap</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Nama sesuai KTP" required />
+          <p class="error-message">Nama lengkap wajib diisi.</p>
+        </div>
+
+        <div class="two-column">
+          <div class="field" data-bpjs-field="birthDate">
+            <label for="birthDate">Tanggal Lahir</label>
+            <div class="input-wrap date-wrap">
+              <input id="birthDate" name="birthDate" type="date" required />
+            </div>
+            <p class="error-message">Tanggal lahir wajib diisi.</p>
+          </div>
+          <div class="field" data-bpjs-field="gender">
+            <label for="gender">Jenis Kelamin</label>
+            <div class="input-wrap">
+              <select id="gender" name="gender" required>
+                <option value="">Pilih</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
+            </div>
+            <p class="error-message">Wajib dipilih.</p>
+          </div>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <div class="field" data-bpjs-field="phone">
+          <label for="phone">Nomor HP</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="Contoh: 081234567890" required />
+          <p class="error-message">Nomor HP wajib diisi.</p>
+        </div>
+
+        <div class="field" data-bpjs-field="email">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="nama@email.com" required />
+          <p class="error-message">Email wajib diisi dengan format yang benar.</p>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <div class="field" data-bpjs-field="careClass">
+          <label for="careClass">Kelas Perawatan</label>
+          <div class="input-wrap">
+            <select id="careClass" name="careClass" required>
+              <option value="">Pilih kelas</option>
+              <option value="Kelas 1">Kelas 1</option>
+              <option value="Kelas 2">Kelas 2</option>
+              <option value="Kelas 3">Kelas 3</option>
+            </select>
+          </div>
+          <p class="error-message">Kelas perawatan wajib dipilih.</p>
+        </div>
+
+        <div class="field" data-bpjs-field="primaryFacility">
+          <label for="primaryFacility">Faskes Tingkat Pertama</label>
+          <div class="input-wrap">
+            <select id="primaryFacility" name="primaryFacility" required>
+              <option value="">Pilih faskes</option>
+              <option value="PUSKESMAS KOTA">PUSKESMAS KOTA</option>
+              <option value="KLINIK SEHAT BERSAMA">KLINIK SEHAT BERSAMA</option>
+              <option value="PRAKTIK DOKTER MANDIRI">PRAKTIK DOKTER MANDIRI</option>
+            </select>
+          </div>
+          <p class="error-message">Faskes wajib dipilih.</p>
+        </div>
+
+        <div class="field" data-bpjs-field="address">
+          <label for="address">Alamat Domisili</label>
+          <textarea id="address" name="address" placeholder="Jalan, RT/RW, Kelurahan, Kecamatan, Kota..." required></textarea>
+          <p class="error-message">Alamat domisili wajib diisi.</p>
+        </div>
+
+        <button class="primary-button" type="submit">Daftar BPJS Sekarang</button>
+      </form>
+
+    </section>
+  </main>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <section class="modal-card">
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <h2 class="modal-title" id="modalTitle">Pendaftaran Berhasil</h2>
+      <p class="modal-copy">Data antrean Anda sudah tersimpan.</p>
+      <div class="result-list" id="resultList"></div>
+      <button class="primary-button" type="button" id="closeModal">Selesai</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

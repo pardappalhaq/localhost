@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi Mahasiswa</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 480px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            animation: slideUp 0.6s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #2d3748;
+            font-weight: 700;
+            font-size: 1.8rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .input-icon-wrapper {
+            position: relative;
+        }
+
+        .input-icon-wrapper i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #a0aec0;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 14px 15px 14px 45px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            color: #2d3748;
+            background: #f8fafc;
+            transition: all 0.3s ease;
+            appearance: none;
+        }
+
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23a0aec0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            border-color: #8ec5fc;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(142, 197, 252, 0.2);
+            background: #fff;
+        }
+
+        input[type="text"]:focus + i,
+        .input-icon-wrapper:focus-within i {
+            color: #667eea;
+        }
+
+        .date-group {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr 1fr;
+            gap: 12px;
+        }
+
+        .date-group .input-icon-wrapper i {
+            display: none; /* Hide icons for date selects to save space */
+        }
+        
+        .date-group select {
+            padding-left: 15px; /* Adjust padding since icon is hidden */
+        }
+
+        .error {
+            border-color: #fc8181 !important;
+            background: #fff5f5 !important;
+            animation: shake 0.5s;
+        }
+
+        .error + i {
+            color: #fc8181 !important;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-6px); }
+            50% { transform: translateX(6px); }
+            75% { transform: translateX(-6px); }
+        }
+
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 20px rgba(118, 75, 162, 0.25);
+            letter-spacing: 0.5px;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(118, 75, 162, 0.35);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #notif {
+            display: none;
+            margin-top: 25px;
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            animation: slideUp 0.3s ease forwards;
+            font-size: 0.95rem;
+        }
+
+        .valid {
+            background: #c6f6d5;
+            color: #22543d;
+            border: 1px solid #9ae6b4;
+        }
+
+        .invalid {
+            background: #fed7d7;
+            color: #742a2a;
+            border: 1px solid #fc8181;
+        }
+        
+        .date-label {
+            margin-bottom: 8px;
+        }
+    </style>
+
+    <script>
+        // Use a function instead of document.write for better practice
+        function populateYears() {
+            let yearSelect = document.getElementById("tahun");
+            for (let i = 2007; i >= 1988; i--) {
+                let opt = document.createElement("option");
+                opt.value = i;
+                opt.text = i;
+                yearSelect.add(opt);
+            }
+        }
+
+        function resetTGL() {
+            let bulan = parseInt(document.getElementById("bulan").value);
+            let tahun = parseInt(document.getElementById("tahun").value);
+            let maxDay;
+
+            if (bulan == 1 || bulan == 3 || bulan == 5 || bulan == 7 ||
+                bulan == 8 || bulan == 10 || bulan == 12) {
+                maxDay = 31;
+            } else if (bulan == 2) {
+                maxDay = (tahun % 4 == 0) ? 29 : 28;
+            } else {
+                maxDay = 30;
+            }
+
+            let tgl = document.getElementById("tanggal");
+            tgl.innerHTML = "";
+
+            for (let i = 1; i <= maxDay; i++) {
+                let opt = document.createElement("option");
+                opt.value = i;
+                opt.text = i;
+                tgl.add(opt);
+            }
+        }
+
+        function validasi() {
+            let nama = document.getElementById("nama");
+            let email = document.getElementById("email");
+            let nim = document.getElementById("nim");
+            let notif = document.getElementById("notif");
+
+            let status = true;
+            let pesan = [];
+
+            // Reset classes
+            nama.classList.remove("error");
+            email.classList.remove("error");
+            nim.classList.remove("error");
+            notif.style.display = "none";
+
+            // Force reflow to restart CSS animations if user submits multiple times
+            void nama.offsetWidth;
+            void email.offsetWidth;
+            void nim.offsetWidth;
+
+            if (nama.value.trim() == "") {
+                status = false;
+                pesan.push("Nama");
+                nama.classList.add("error");
+            }
+
+            if (email.value.indexOf("@gmail.com") == -1) {
+                status = false;
+                pesan.push("Email (@gmail.com)");
+                email.classList.add("error");
+            }
+
+            if (nim.value.toUpperCase().indexOf("J04") != 0) {
+                status = false;
+                pesan.push("NIM (Awali J04)");
+                nim.classList.add("error");
+            }
+
+            if (status) {
+                notif.style.display = "flex";
+                notif.className = "valid";
+                notif.innerHTML = "<i class='fas fa-check-circle'></i> Data berhasil divalidasi!";
+
+                // Reset form slightly delayed for better UX
+                setTimeout(() => {
+                    nama.value = "";
+                    email.value = "";
+                    nim.value = "";
+                    document.getElementById("tahun").selectedIndex = 0;
+                    document.getElementById("bulan").selectedIndex = 0;
+                    resetTGL();
+                    document.getElementById("tanggal").selectedIndex = 0;
+                    notif.style.display = "none";
+                }, 3500);
+            } else {
+                notif.style.display = "flex";
+                notif.className = "invalid";
+                notif.innerHTML = "<i class='fas fa-exclamation-triangle'></i> Periksa kembali: " + pesan.join(", ");
+            }
+
+            return false;
+        }
+
+        window.onload = function() {
+            populateYears();
+            resetTGL();
+        };
+    </script>
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <h2>Validasi Mahasiswa</h2>
+
+        <form onsubmit="return validasi()">
+
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <div class="input-icon-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nama" placeholder="Masukkan nama lengkap Anda" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Alamat Email</label>
+                <div class="input-icon-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="email" placeholder="contoh@gmail.com" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="nim">NIM Mahasiswa</label>
+                <div class="input-icon-wrapper">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="nim" placeholder="Awali dengan J04..." autocomplete="off">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="date-label">Tanggal Lahir</label>
+                <div class="date-group">
+                    <div class="input-icon-wrapper">
+                        <select id="tanggal"></select>
+                    </div>
+                    <div class="input-icon-wrapper">
+                        <select id="bulan" onchange="resetTGL()">
+                            <option value="1">Januari</option>
+                            <option value="2">Februari</option>
+                            <option value="3">Maret</option>
+                            <option value="4">April</option>
+                            <option value="5">Mei</option>
+                            <option value="6">Juni</option>
+                            <option value="7">Juli</option>
+                            <option value="8">Agustus</option>
+                            <option value="9">September</option>
+                            <option value="10">Oktober</option>
+                            <option value="11">November</option>
+                            <option value="12">Desember</option>
+                        </select>
+                    </div>
+                    <div class="input-icon-wrapper">
+                        <select id="tahun" onchange="resetTGL()"></select>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit">
+                <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Validasi Data
+            </button>
+
+            <div id="notif" style="display: none;"></div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

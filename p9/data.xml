@@ -1,0 +1,32 @@
+<daftarMhs>
+	<mhs>
+		<nim>J0403251042</nim>
+		<nama>Faris Daffa Al Haq</nama>
+		<prodi>Teknologi Rekayasa Perangkat Lunak</prodi>
+		<foto>daffa.JPG</foto>
+	</mhs>
+	<mhs>
+		<nim>J0403251122</nim>
+		<nama>Zakiy A</nama>
+		<prodi>Teknologi Rekayasa Perangkat Lunak</prodi>
+		<foto>nadif.jpeg</foto>
+	</mhs>
+	<mhs>
+		<nim>J0403251132</nim>
+		<nama>Rayyan Bawaazir</nama>
+		<prodi>Teknologi Rekayasa Perangkat Lunak</prodi>
+		<foto>rayyan.jpeg</foto>
+	</mhs>
+	<mhs>
+		<nim>J0403251135</nim>
+		<nama>Syahrul Hidayahtullah</nama>
+		<prodi>Teknologi Rekayasa Perangkat Lunak</prodi>
+		<foto>sahrul.jpeg</foto>
+	</mhs>
+	<mhs>
+		<nim>J0403251136</nim>
+		<nama>Vincen Rompis</nama>
+		<prodi>Teknologi Rekayasa Perangkat Lunak</prodi>
+		<foto>vincen.jpeg</foto>
+	</mhs>
+</daftarMhs>

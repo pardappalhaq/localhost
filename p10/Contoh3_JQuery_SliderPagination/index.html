@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>jQuery Slider Pagination – Contoh 3</title>
+    <meta name="description" content="Demo konsep slider pagination menggunakan jQuery UI, dengan preview halaman dan navigasi Prev/Next yang elegan."/>
+    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/modernizr.custom.63321.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ── Decorative blobs ── -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+
+        <!-- ── Header ── -->
+        <header>
+            <div class="header-badge">jQuery UI · Praktikum 10</div>
+            <h1>Slider <span class="gradient-text">Pagination</span></h1>
+            <p class="header-sub">Konsep Navigasi Halaman Interaktif</p>
+        </header>
+
+        <!-- ── Main card ── -->
+        <div class="main">
+
+            <!-- Stat row -->
+            <div class="stat-row">
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-current">1</div>
+                    <div class="stat-label">Halaman Aktif</div>
+                </div>
+                <div class="stat-card stat-card--mid">
+                    <div class="stat-value" id="stat-remain">99</div>
+                    <div class="stat-label">Sisa Halaman</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">100</div>
+                    <div class="stat-label">Total Halaman</div>
+                </div>
+            </div>
+
+            <!-- Page preview -->
+            <div id="preview" class="preview">
+                <div class="preview-ring"></div>
+                <div class="preview-label">Halaman</div>
+                <span id="preview-num">1</span>
+                <div class="preview-total">dari <strong>100</strong></div>
+            </div>
+
+            <!-- Slider widget -->
+            <div id="slider" class="sp-slider-wrapper">
+                <nav>
+                    <a href="#" class="sp-prev" title="Halaman Sebelumnya (←)">Previous</a>
+                    <a href="#" class="sp-next" title="Halaman Berikutnya (→)">Next</a>
+                </nav>
+            </div>
+
+            <!-- Progress -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <span class="progress-title">Progress</span>
+                    <span class="progress-value"><span id="progress-pct">1</span>%</span>
+                </div>
+                <div class="progress-wrap">
+                    <div class="progress-bar" id="progress-fill" style="width:1%"></div>
+                    <div class="progress-glow" id="progress-glow" style="left:1%"></div>
+                </div>
+            </div>
+
+        </div><!-- /.main -->
+
+    </div><!-- /.container -->
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.pagination.js"></script>
+    <script>
+    $(function () {
+        var total     = 100;
+        var $num      = $('#preview-num');
+        var $statCur  = $('#stat-current');
+        var $statRem  = $('#stat-remain');
+        var $fill     = $('#progress-fill');
+        var $glow     = $('#progress-glow');
+        var $pct      = $('#progress-pct');
+
+        function updateUI(value) {
+            // Flip animation
+            $num.addClass('flip');
+            setTimeout(function () {
+                $num.text(value).removeClass('flip');
+            }, 150);
+
+            $statCur.text(value);
+            $statRem.text(total - value);
+
+            var pct = Math.round((value / total) * 100);
+            $fill.css('width', pct + '%');
+            $glow.css('left',  pct + '%');
+            $pct.text(pct);
+        }
+
+        var paginationInstance = $('#slider').pagination({
+            total    : total,
+            onChange : function (value) { updateUI(value); }
+        });
+
+        // Keyboard navigation
+        $(document).on('keydown', function (e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
+                paginationInstance.$navNext.trigger('click');
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+                paginationInstance.$navPrev.trigger('click');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
